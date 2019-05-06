@@ -7,8 +7,8 @@ public class WordManager : MonoBehaviour {
 	public List<Word> words;
 
 	public WordSpawner wordSpawner;
-
-	private bool hasActiveWord;
+    public GameObject gameOverdisplay;
+    private bool hasActiveWord;
 	private Word activeWord;
 
 	public void AddWord ()
@@ -44,8 +44,13 @@ public class WordManager : MonoBehaviour {
 		if (hasActiveWord && activeWord.WordTyped())
 		{
 			hasActiveWord = false;
+            Score.score++;
 			words.Remove(activeWord);
 		}
 	}
 
+    public void EndGame()
+    {
+        gameOverdisplay.SetActive(true);
+    }
 }

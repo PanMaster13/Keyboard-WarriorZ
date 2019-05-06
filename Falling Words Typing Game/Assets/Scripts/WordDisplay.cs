@@ -21,13 +21,18 @@ public class WordDisplay : MonoBehaviour
 
     public void RemoveWord()
     {
-        Score.scoreText += 1;
         Destroy(gameObject);
     }
 
     private void Update()
     {
         transform.Translate(0f, -fallSpeed * Time.deltaTime, 0f);
+        if (transform.position.y < -4)
+        {
+            if(Player.healthPoints != 0)
+                Player.healthPoints--;
+            RemoveWord();
+        }
     }
 
 }

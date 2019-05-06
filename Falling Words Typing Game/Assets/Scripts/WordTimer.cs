@@ -11,12 +11,16 @@ public class WordTimer : MonoBehaviour {
 
 	private void Update()
 	{
-		if (Time.time >= nextWordTime)
+		if (Time.time >= nextWordTime && Player.healthPoints != 0)
 		{
 			wordManager.AddWord();
 			nextWordTime = Time.time + wordDelay;
 			wordDelay *= .99f;
 		}
-	}
+        if (Player.healthPoints == 0)
+        {
+            wordManager.EndGame();
+        }
+    }
 
 }
