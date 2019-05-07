@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class WordDisplay : MonoBehaviour
 {
-
     public Text text;
-    public float fallSpeed = 1f;
+    public string initialText;
+    public bool hasMinus;
 
     public void SetWord(string word)
     {
         text.text = word;
+        initialText = text.text;
     }
 
     public void RemoveLetter()
@@ -26,13 +28,6 @@ public class WordDisplay : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(0f, -fallSpeed * Time.deltaTime, 0f);
-        if (transform.position.y < -4)
-        {
-            if(Player.healthPoints != 0)
-                Player.healthPoints--;
-            RemoveWord();
-        }
+        transform.Translate(0f, -WordManager.fallSpeed * Time.deltaTime, 0f);
     }
-
 }

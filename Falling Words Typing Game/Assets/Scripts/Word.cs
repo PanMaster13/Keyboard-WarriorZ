@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class Word {
 
 	public string word;
 	private int typeIndex;
-
-	WordDisplay display;
+    public Text buffText;
+	public WordDisplay display;
 
 	public Word (string _word, WordDisplay _display)
 	{
@@ -21,7 +22,13 @@ public class Word {
 
 	public char GetNextLetter ()
 	{
-		return word[typeIndex];
+        char returnWord = '\0';
+        if (typeIndex <= word.Length)
+        {
+            returnWord = word[typeIndex];
+        }
+
+        return returnWord;
 	}
 
 	public void TypeLetter ()
@@ -33,11 +40,28 @@ public class Word {
 	public bool WordTyped ()
 	{
 		bool wordTyped = (typeIndex >= word.Length);
-		if (wordTyped)
-		{
-			display.RemoveWord();
-		}
+
 		return wordTyped;
 	}
 
+    public bool checkBuff()
+    {
+        bool isBuff = false;
+        if (word == "slowbuff")
+        {
+            WordManager.fallSpeed = WordManager.fallSpeed - 0.2f;
+            isBuff = true;
+        }
+        else if (word == "healthbuff")
+        {
+            if (Player.healthPoints != WordManager.initialPlayerHealth)
+            {
+                Player.healthPoints++;
+                isBuff = true;
+            }
+        }
+
+        return isBuff;
+
+    }
 }
