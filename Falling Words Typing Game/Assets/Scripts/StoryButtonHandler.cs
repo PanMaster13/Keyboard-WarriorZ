@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
-using UnityEditor.SceneManagement;
 
 using UE = UnityEngine.SceneManagement;
 
 public class StoryButtonHandler : MonoBehaviour
 {
     /*
-     * Build Index Reference (For LoadScene Function)
-     * Main Menu - 0
-     * Main - 1
-     * Tutorial - 2
-     * Story - 3
-     */
+    * Build Index Reference (For LoadScene Function)
+    * Main Menu - 0
+    * Tutorial - 1
+    * Story - 2
+    * DifficultySelector - 3
+    * EasyMode - 4
+    */
 
     public void MainMenu()
     {
@@ -22,6 +22,6 @@ public class StoryButtonHandler : MonoBehaviour
     public void Tutorial()
     {
         Debug.Log("Tutorial is pressed");
-        UE.SceneManager.LoadScene(2);
+        UE.SceneManager.LoadScene(1);
     }
 }

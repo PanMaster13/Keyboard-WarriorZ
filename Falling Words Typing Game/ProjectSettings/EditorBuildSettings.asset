@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/MainMenu.unity
     guid: ed30cdb9d1a492e45be5c38949028253
   - enabled: 1
-    path: Assets/Main.unity
-    guid: 5f7b96be52ae91943a556abaf2c05bf3
-  - enabled: 1
     path: Assets/Tutorial.unity
     guid: 4e11dedbb8ac18242a4cce2ad0aac66f
   - enabled: 1
     path: Assets/Story.unity
     guid: 6ba761e45491738429b4c737ce41cbb0
+  - enabled: 1
+    path: Assets/DifficultySelector.unity
+    guid: 7a0f0be7095ad854a9c94cb5c343f348
+  - enabled: 1
+    path: Assets/EasyMode.unity
+    guid: 5f7b96be52ae91943a556abaf2c05bf3
   m_configObjects: {}
