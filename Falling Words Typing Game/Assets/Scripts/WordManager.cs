@@ -46,13 +46,40 @@ public class WordManager : MonoBehaviour {
 
 	public void AddWord ()
 	{
-		Word word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord());
-		Debug.Log(word.word);
+        Word word;
 
-		words.Add(word);
+        if (difficultyValue == Difficulty.Easy)
+        {
+            word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord());
+            Debug.Log(word.word);
+        }
+
+        else if (difficultyValue == Difficulty.Medium)
+        {
+            word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord(), Random.Range(0, 5));
+            Debug.Log(word.word);
+        }
+        else
+        {
+            word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord());
+            Debug.Log(word.word);
+        }
+
+        words.Add(word);
 	}
 
-	public void TypeLetter (char letter)
+    //Pass in the active word's transform so more words can be spawned at the spot
+    public void SpawnMoreWord(Transform activeWordtransform)
+    {
+        Word word;
+        word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord(activeWordtransform), Random.Range(0, 5));
+        Debug.Log(word.word);
+
+        words.Add(word);
+    }
+
+
+    public void TypeLetter (char letter)
 	{
 		if (hasActiveWord)
 		{
@@ -79,15 +106,22 @@ public class WordManager : MonoBehaviour {
 
 		if (hasActiveWord && activeWord.WordTyped())
 		{
-			hasActiveWord = false;
+            hasActiveWord = false;
             Score.score++;
+            //Check if the word is a buff or not
             bool buffResult = activeWord.checkBuff();
             if (buffResult)
             {
                 buffDisplay.displayBuffText(activeWord.word);
             }
+            //If difficulty is medium or hard and the word's typeValue is 3
+            //Spawn more word after completing it
+            if(difficultyValue != Difficulty.Easy && activeWord.TypeValue == 3)
+            {
+                SpawnMoreWord(activeWord.display.transform);
+            }
             activeWord.display.RemoveWord();
-			words.Remove(activeWord);
+            words.Remove(activeWord);
 		}
 	}
 
@@ -123,7 +157,8 @@ public class WordManager : MonoBehaviour {
                     }
 
                     //check if player hp is not 0 and the word has not minus hp before
-                    if (Player.healthPoints != 0 && words[i].display.hasMinus == false)
+                    //The word must also not be a speedbuff
+                    if (Player.healthPoints != 0 && words[i].display.hasMinus == false && activeWord.word != "speedbuff")
                     {
                         Player.healthPoints--;
                         words[i].display.hasMinus = true;

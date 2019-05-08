@@ -672,7 +672,7 @@ MonoBehaviour:
   wordSpawner: {fileID: 1506127309}
   gameOverdisplay: {fileID: 2076430279}
   buffDisplay: {fileID: 635503286}
-  difficultyValue: 0
+  difficultyValue: 1
 --- !u!4 &1506127307
 Transform:
   m_ObjectHideFlags: 0

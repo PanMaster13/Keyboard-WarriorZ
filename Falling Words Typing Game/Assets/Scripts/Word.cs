@@ -10,6 +10,7 @@ public class Word {
 	private int typeIndex;
     public Text buffText;
 	public WordDisplay display;
+    private int typeValue;
 
 	public Word (string _word, WordDisplay _display)
 	{
@@ -20,7 +21,17 @@ public class Word {
 		display.SetWord(word);
 	}
 
-	public char GetNextLetter ()
+    public Word(string _word, WordDisplay _display, int typeVal)
+    {
+        word = _word;
+        typeIndex = 0;
+        typeValue = typeVal;
+
+        display = _display;
+        display.SetWord(word);
+    }
+
+    public char GetNextLetter ()
 	{
         char returnWord = '\0';
         if (typeIndex <= word.Length)
@@ -52,6 +63,11 @@ public class Word {
             WordManager.fallSpeed = WordManager.fallSpeed - 0.2f;
             isBuff = true;
         }
+        else if (word == "speedbuff")
+        {
+            WordManager.fallSpeed = WordManager.fallSpeed + 0.2f;
+            isBuff = true;
+        }
         else if (word == "healthbuff")
         {
             if (Player.healthPoints != WordManager.initialPlayerHealth)
@@ -63,5 +79,17 @@ public class Word {
 
         return isBuff;
 
+    }
+
+    public int TypeValue
+    {
+        get
+        {
+            return typeValue;
+        }
+        set
+        {
+            typeValue = value;
+        }
     }
 }
