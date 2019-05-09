@@ -23,7 +23,6 @@ public class WordSpawner : MonoBehaviour {
 
         GameObject wordObj = Instantiate(wordPrefab, transform.position, Quaternion.identity, wordCanvas);
         WordDisplay wordDisplay = wordObj.GetComponent<WordDisplay>();
-
         return wordDisplay;
     }
 

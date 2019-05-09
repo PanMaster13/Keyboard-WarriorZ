@@ -16,7 +16,10 @@ public class WordManager : MonoBehaviour {
     public static int initialPlayerHealth;
     public static float fallSpeed;
 
-    public Difficulty difficultyValue;
+    private const int SPAWNWORDVAL = 3;
+    private const int DEDUCTHPVAL = 4;
+
+    public Difficulty difficultyValue = Difficulty.Easy;
 
     public enum Difficulty
     {
@@ -28,17 +31,14 @@ public class WordManager : MonoBehaviour {
         if(difficultyValue == Difficulty.Easy)
         {
             fallSpeed = 1f;
-            Player.healthPoints = 5;
         }
         else if (difficultyValue == Difficulty.Medium)
         {
             fallSpeed = 2f;
-            Player.healthPoints = 3;
         }
         else if (difficultyValue == Difficulty.Hard)
         {
             fallSpeed = 3f;
-            Player.healthPoints = 1;
         }
 
         initialPlayerHealth = Player.healthPoints;
@@ -61,7 +61,12 @@ public class WordManager : MonoBehaviour {
         }
         else
         {
-            word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord());
+            word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord(), Random.Range(0, 5));
+            word.display.agility = true;
+            if (word.TypeValue == 4)
+            {
+                word.display.SetColorRed();
+            }
             Debug.Log(word.word);
         }
 
@@ -77,7 +82,6 @@ public class WordManager : MonoBehaviour {
 
         words.Add(word);
     }
-
 
     public void TypeLetter (char letter)
 	{
@@ -116,9 +120,13 @@ public class WordManager : MonoBehaviour {
             }
             //If difficulty is medium or hard and the word's typeValue is 3
             //Spawn more word after completing it
-            if(difficultyValue != Difficulty.Easy && activeWord.TypeValue == 3)
+            if(difficultyValue != Difficulty.Easy && activeWord.TypeValue == SPAWNWORDVAL)
             {
                 SpawnMoreWord(activeWord.display.transform);
+            }
+            if(difficultyValue == Difficulty.Hard && activeWord.TypeValue == DEDUCTHPVAL)
+            {
+                Player.healthPoints--;
             }
             activeWord.display.RemoveWord();
             words.Remove(activeWord);
@@ -158,7 +166,7 @@ public class WordManager : MonoBehaviour {
 
                     //check if player hp is not 0 and the word has not minus hp before
                     //The word must also not be a speedbuff
-                    if (Player.healthPoints != 0 && words[i].display.hasMinus == false && activeWord.word != "speedbuff")
+                    if (Player.healthPoints != 0 && words[i].display.hasMinus == false && words[i].word != "speedbuff" && words[i].TypeValue != DEDUCTHPVAL)
                     {
                         Player.healthPoints--;
                         words[i].display.hasMinus = true;

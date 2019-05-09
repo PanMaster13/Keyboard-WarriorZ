@@ -8,6 +8,8 @@ public class WordDisplay : MonoBehaviour
     public Text text;
     public string initialText;
     public bool hasMinus;
+    public bool agility = false;
+    public float pingPong;
 
     public void SetWord(string word)
     {
@@ -18,7 +20,7 @@ public class WordDisplay : MonoBehaviour
     public void RemoveLetter()
     {
         text.text = text.text.Remove(0, 1);
-        text.color = Color.red;
+        text.color = Color.green;
     }
 
     public void RemoveWord()
@@ -28,6 +30,26 @@ public class WordDisplay : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(0f, -WordManager.fallSpeed * Time.deltaTime, 0f);
+        if (agility == true)
+        {
+            if (transform.position.x <= 1)
+            {
+                pingPong = Mathf.PingPong(Time.time, 1);
+            }
+            else if (transform.position.x >= 1)
+            {
+                pingPong = -Mathf.PingPong(Time.time, 1);
+            }
+            transform.Translate(pingPong, -WordManager.fallSpeed * Time.deltaTime, 0f);
+        }
+        else
+        {
+            transform.Translate(0f, -WordManager.fallSpeed * Time.deltaTime, 0f);
+        }
+    }
+
+    public void SetColorRed()
+    {
+        text.color = Color.red;
     }
 }
