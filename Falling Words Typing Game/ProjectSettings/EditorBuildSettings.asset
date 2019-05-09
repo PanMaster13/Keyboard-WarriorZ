@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EasyMode.unity
     guid: 5f7b96be52ae91943a556abaf2c05bf3
+  - enabled: 1
+    path: Assets/EndScreen.unity
+    guid: 6834b3590b5a7ee4e82f967e06161441
   m_configObjects: {}
