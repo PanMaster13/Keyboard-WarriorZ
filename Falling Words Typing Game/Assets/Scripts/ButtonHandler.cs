@@ -30,6 +30,12 @@ public class ButtonHandler : MonoBehaviour
         Debug.Log("Score Board is pressed");
     }
 
+    public void Rematch()
+    {
+        Debug.Log("Rematch is pressed");
+        UE.SceneManager.LoadScene("Game");
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit is pressed");
