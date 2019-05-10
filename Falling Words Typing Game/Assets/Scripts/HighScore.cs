@@ -8,58 +8,54 @@ using System;
 public class HighScore : MonoBehaviour
 {
     public Text text;
-    public GameObject obj;
-    public static string hiScore;
-
-    public int[] readNum; //first element is the highscore, second element is the game score
-    public string[] readString; //first element is highscore string, second element is game score string
+    public static string testText;
+    public string stringHiScore;
+    public string stringGameScore;
+    public int intHiScore;
+    public int intGameScore;
 
     // Start is called before the first frame update
     void Start()
     {
         text = GetComponent<Text>();
-        obj.gameObject.SetActive(false);
-
-        //reading from file
-        StreamReader sr = new StreamReader("score.txt");
+        string filepath = Application.dataPath + "/score.txt";
+        StreamReader sr = new StreamReader(filepath);
         string data = sr.ReadLine();
-        for (int i = 0; data != null; i++)
-        {
-            readString[i] = data;
-            data = sr.ReadLine();
-        }
-        //conversion to malleable int variable
-        for (int i = 0; 0 < readString.Length; i++)
-        {
-            readNum[i] = Convert.ToInt32(readString[i]);
-        }
+        string data2 = sr.ReadLine();
+        stringHiScore = data;
+        stringGameScore = data2;
+        intHiScore = Convert.ToInt32(stringHiScore);
+        intGameScore = Convert.ToInt32(stringGameScore);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Score.score > readNum[0])
+
+        if (Score.score > intHiScore)
         {
-            readNum[0] = Score.score;
-            readNum[1] = Score.score;
-            hiScore = Score.score.ToString();
-            obj.gameObject.SetActive(true);
-            using (StreamWriter sw = new StreamWriter("score.txt"))
+            intHiScore = Score.score;
+            intGameScore = intHiScore;
+            testText = intHiScore.ToString();
+            string filepath = Application.dataPath + "/score.txt";
+            using (StreamWriter sw = new StreamWriter(filepath))
             {
-                sw.WriteLine(readNum[0].ToString() +
-                    "\n" + readNum[1].ToString());
+                sw.WriteLine(intHiScore.ToString() +
+                    "\n" + intGameScore.ToString());
             }
         }
         else
         {
-            readNum[1] = Score.score;
-            using (StreamWriter sw = new StreamWriter("score.txt"))
+            intGameScore = Score.score;
+            testText = intHiScore.ToString();
+            string filepath = Application.dataPath + "/score.txt";
+            using (StreamWriter sw = new StreamWriter(filepath))
             {
-                sw.WriteLine(readNum[0].ToString() +
-                    "\n" + readNum[1].ToString());
+                sw.WriteLine(intHiScore.ToString() +
+                    "\n" + intGameScore.ToString());
             }
         }
-
-        text.text = "High Score: " + hiScore;
+        text.text = "High Score: " + testText;
     }
 }
