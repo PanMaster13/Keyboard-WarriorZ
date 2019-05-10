@@ -10,7 +10,9 @@ public class ButtonHandler : MonoBehaviour
     * Tutorial - 1
     * Story - 2
     * DifficultySelector - 3
-    * EasyMode - 4
+    * Game - 4
+    * EndScreen - 5
+    * ScoreBoard - 6
     */
 
     public void PlayGame()
@@ -28,6 +30,7 @@ public class ButtonHandler : MonoBehaviour
     public void ScoreBoardGame()
     {
         Debug.Log("Score Board is pressed");
+        UE.SceneManager.LoadScene(6);
     }
 
     public void Rematch()

@@ -12,7 +12,9 @@ public class PauseButtonHandler : MonoBehaviour
     * Tutorial - 1
     * Story - 2
     * DifficultySelector - 3
-    * EasyMode - 4
+    * Game - 4
+    * EndScreen - 5
+    * ScoreBoard - 6
     */
 
     public static bool GameIsPaused = false;
