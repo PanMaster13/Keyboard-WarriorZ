@@ -11,6 +11,7 @@ public class Word {
     public Text buffText;
 	public WordDisplay display;
     private int typeValue;
+    public GameObject effect;
 
 	public Word (string _word, WordDisplay _display)
 	{
@@ -51,7 +52,7 @@ public class Word {
 	public bool WordTyped ()
 	{
 		bool wordTyped = (typeIndex >= word.Length);
-
+        
 		return wordTyped;
 	}
 

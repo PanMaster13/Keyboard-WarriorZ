@@ -10,6 +10,7 @@ public class WordDisplay : MonoBehaviour
     public bool hasMinus;
     public bool agility = false;
     public float pingPong;
+    public GameObject effect;
 
     public void SetWord(string word)
     {
@@ -26,6 +27,7 @@ public class WordDisplay : MonoBehaviour
     public void RemoveWord()
     {
         Destroy(gameObject);
+        Instantiate(effect, gameObject.transform.position, Quaternion.identity);
     }
 
     private void Update()
