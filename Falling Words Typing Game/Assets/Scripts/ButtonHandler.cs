@@ -36,6 +36,8 @@ public class ButtonHandler : MonoBehaviour
     public void Rematch()
     {
         Debug.Log("Rematch is pressed");
+        Score.score = 0;
+        ElapsedTime.endTime = "";
         UE.SceneManager.LoadScene("Game");
     }
 
