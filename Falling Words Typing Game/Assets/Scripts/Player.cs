@@ -5,12 +5,34 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public static int healthPoints;
+    public int healthPoints;
+    public int invinPoints;
+    public bool invinLock;
+    public bool healthLock;
 
-    // Start is called before the first frame update
-    void Start()
+    public Player()
     {
         healthPoints = 5;
+        invinPoints = 0;
+    }
+
+    public void useInvinBuff()
+    {
+        StartCoroutine(Delay());
+    }
+
+    IEnumerator Delay()
+    {
+        invinLock = true;
+        healthLock = true;
+        while (invinPoints > 0)
+        {
+            invinPoints--;
+            yield return new WaitForSecondsRealtime(0.5f);
+            Debug.Log(invinPoints);
+        }
+        invinLock = false;
+        healthLock = false;
     }
 
 }

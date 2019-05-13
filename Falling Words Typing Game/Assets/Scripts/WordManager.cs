@@ -13,11 +13,13 @@ public class WordManager : MonoBehaviour {
 
     public BuffDisplay buffDisplay;
 
-    public static int initialPlayerHealth;
+    public int initialPlayerHealth;
     public static float fallSpeed;
 
     private const int SPAWNWORDVAL = 3;
     private const int DEDUCTHPVAL = 4;
+
+    public Player player;
 
     public Difficulty difficultyValue = Difficulty.Easy;
 
@@ -41,7 +43,7 @@ public class WordManager : MonoBehaviour {
             fallSpeed = 3f;
         }
 
-        initialPlayerHealth = Player.healthPoints;
+        initialPlayerHealth = player.healthPoints;
     }
 
 	public void AddWord ()
@@ -77,7 +79,7 @@ public class WordManager : MonoBehaviour {
     public void SpawnMoreWord(Transform activeWordtransform)
     {
         Word word;
-        word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord(activeWordtransform), Random.Range(0, 5));
+        word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord(activeWordtransform));
         Debug.Log(word.word);
 
         words.Add(word);
@@ -85,6 +87,10 @@ public class WordManager : MonoBehaviour {
 
     public void TypeLetter (char letter)
 	{
+        if(letter == '5')
+        {
+            player.useInvinBuff();
+        }
 		if (hasActiveWord)
 		{
             if (activeWord != null)
@@ -111,9 +117,13 @@ public class WordManager : MonoBehaviour {
 		if (hasActiveWord && activeWord.WordTyped())
 		{
             hasActiveWord = false;
+            //Add one to score
             Score.score++;
+            //if invinPoints less than 20, add one.
+            if (player.invinPoints < 20 && player.invinLock == false)
+                player.invinPoints++;
             //Check if the word is a buff or not
-            bool buffResult = activeWord.checkBuff();
+            bool buffResult = checkBuff(activeWord.word);
             if (buffResult)
             {
                 buffDisplay.displayBuffText(activeWord.word);
@@ -124,14 +134,39 @@ public class WordManager : MonoBehaviour {
             {
                 SpawnMoreWord(activeWord.display.transform);
             }
-            if(difficultyValue == Difficulty.Hard && activeWord.TypeValue == DEDUCTHPVAL)
+            if(difficultyValue == Difficulty.Hard && activeWord.TypeValue == DEDUCTHPVAL && player.healthLock == false)
             {
-                Player.healthPoints--;
+                player.healthPoints--;
             }
             activeWord.display.RemoveWord();
             words.Remove(activeWord);
 		}
 	}
+
+    public bool checkBuff(string word)
+    {
+        bool isBuff = false;
+        if (word == "slowbuff")
+        {
+            fallSpeed = fallSpeed - 0.2f;
+            isBuff = true;
+        }
+        else if (word == "speedbuff")
+        {
+            fallSpeed = fallSpeed + 0.2f;
+            isBuff = true;
+        }
+        else if (word == "healthbuff")
+        {
+            if (player.healthPoints != initialPlayerHealth)
+            {
+                player.healthPoints++;
+                isBuff = true;
+            }
+        }
+
+        return isBuff;
+    }
 
     public void EndGame()
     {
@@ -167,9 +202,9 @@ public class WordManager : MonoBehaviour {
 
                     //check if player hp is not 0 and the word has not minus hp before
                     //The word must also not be a speedbuff
-                    if (Player.healthPoints != 0 && words[i].display.hasMinus == false && words[i].word != "speedbuff" && words[i].TypeValue != DEDUCTHPVAL)
+                    if (player.healthPoints != 0 && words[i].display.hasMinus == false && words[i].word != "speedbuff" && words[i].TypeValue != DEDUCTHPVAL && player.healthLock == false)
                     {
-                        Player.healthPoints--;
+                        player.healthPoints--;
                         words[i].display.hasMinus = true;
                     }
                     //Remove the word display

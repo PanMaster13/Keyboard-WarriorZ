@@ -55,32 +55,6 @@ public class Word {
 		return wordTyped;
 	}
 
-    public bool checkBuff()
-    {
-        bool isBuff = false;
-        if (word == "slowbuff")
-        {
-            WordManager.fallSpeed = WordManager.fallSpeed - 0.2f;
-            isBuff = true;
-        }
-        else if (word == "speedbuff")
-        {
-            WordManager.fallSpeed = WordManager.fallSpeed + 0.2f;
-            isBuff = true;
-        }
-        else if (word == "healthbuff")
-        {
-            if (Player.healthPoints != WordManager.initialPlayerHealth)
-            {
-                Player.healthPoints++;
-                isBuff = true;
-            }
-        }
-
-        return isBuff;
-
-    }
-
     public int TypeValue
     {
         get

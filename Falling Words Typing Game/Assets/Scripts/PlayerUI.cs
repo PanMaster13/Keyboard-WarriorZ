@@ -6,16 +6,22 @@ using UnityEngine.UI;
 public class PlayerUI : MonoBehaviour
 {
 
-    //These are for health
+    //These are for bars for health and invincibility
     public RectTransform healthBarFill;
+    public RectTransform invinBarFill;
 
-    //These are for score
+    //These are texts for score and invincibility bar
     public Text scoreText;
+    public Text invinBarText;
+
+    //Store an player object to access its stats
+    public Player player;
 
     // Update is called once per frame
     void Update()
     {
-        SetHealthBar(Player.healthPoints);
+        SetHealthBar(player.healthPoints);
+        SetInvinBar(player.invinPoints);
         DisplayScore();
     }
 
@@ -23,7 +29,19 @@ public class PlayerUI : MonoBehaviour
     {
         if (amt >= 0)
         {
-            healthBarFill.localScale = new Vector3((float)amt*0.3f, 1f, 1f);
+            healthBarFill.localScale = new Vector3((float)amt*0.2f, 1f, 1f);
+        }
+    }
+
+    public void SetInvinBar(int amt)
+    {
+        if (amt >= 0)
+        {
+            invinBarFill.localScale = new Vector3((float)amt * 0.05f, 1f, 1f);
+            if (amt >= 20)
+            {
+                invinBarText.gameObject.SetActive(true);
+            }
         }
     }
 

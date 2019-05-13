@@ -27,13 +27,13 @@ public class WordTimer : MonoBehaviour {
         string seconds = (t % 60).ToString("f2");
 
         timerText.text = "Time: " + minutes + ":" + seconds;
-        if (Time.time >= nextWordTime && Player.healthPoints != 0)
+        if (Time.time >= nextWordTime && wordManager.player.healthPoints != 0)
 		{
 			wordManager.AddWord();
 			nextWordTime = Time.time + wordDelay;
 			wordDelay *= .99f;
 		}
-        if (Player.healthPoints == 0)
+        if (wordManager.player.healthPoints == 0)
         {
             ElapsedTime.endTime += timerText.text;
             wpm = Score.score / 5;
