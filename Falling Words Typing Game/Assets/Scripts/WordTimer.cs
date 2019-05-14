@@ -43,7 +43,7 @@ public class WordTimer : MonoBehaviour {
 		}
         if (wordManager.player.healthPoints == 0)
         {
-            ElapsedTime.endTime += timerText.text;
+            ElapsedTime.endTime += minutes+":"+seconds;
             wpm = Score.score / 5;
             WPM.wpm += wpm.ToString();
             wordManager.EndGame();
