@@ -19,6 +19,8 @@ public class WordManager : MonoBehaviour {
     private const int SPAWNWORDVAL = 3;
     private const int DEDUCTHPVAL = 4;
 
+    public int scoreValue = 1;
+
     public Player player;
 
     public Difficulty difficultyValue = Difficulty.Easy;
@@ -118,7 +120,7 @@ public class WordManager : MonoBehaviour {
 		{
             hasActiveWord = false;
             //Add one to score
-            Score.score++;
+            Score.score = Score.score + scoreValue;
             //if invinPoints less than 20, add one.
             if (player.invinPoints < 20 && player.invinLock == false)
                 player.invinPoints++;
@@ -186,7 +188,7 @@ public class WordManager : MonoBehaviour {
             if (words[i].display != null)
             {
                 //if words leave the screen
-                if (words[i].display.transform.position.y < -5)
+                if (words[i].display.transform.position.y < -5.5)
                 {
                     //check if there's an active word
                     if (activeWord != null)
