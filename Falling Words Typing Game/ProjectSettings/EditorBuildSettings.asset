@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ScoreBoard.unity
     guid: 9e0547ef6ac719f4eba5c8f8ce75c5f0
+  - enabled: 1
+    path: Assets/EndlessRunner.unity
+    guid: ed2feaf4ecea8a6458fb1cd7560f0f20
   m_configObjects: {}
