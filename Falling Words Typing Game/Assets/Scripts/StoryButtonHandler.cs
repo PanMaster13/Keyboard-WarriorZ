@@ -5,15 +5,16 @@ using UE = UnityEngine.SceneManagement;
 public class StoryButtonHandler : MonoBehaviour
 {
     /*
-     * Build Index Reference (For LoadScene Function)
-     * Main Menu - 0
-     * Tutorial - 1
-     * Story - 2
-     * DifficultySelector - 3
-     * Game - 4
-     * EndScreen - 5
-     * ScoreBoard - 6
-     */
+    * Build Index Reference (For LoadScene Function)
+    * Main Menu - 0
+    * Tutorial - 1
+    * Story - 2
+    * Game - 3
+    * Endscreen - 4
+    * ScoreBoard - 5
+    * EndlessRunner - 6
+    * GameType - 7
+    */
 
     public void MainMenu()
     {

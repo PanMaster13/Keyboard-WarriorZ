@@ -369,7 +369,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: e7bf1ba777b0246459bca7b3331c95cb, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -597,7 +597,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: e7bf1ba777b0246459bca7b3331c95cb, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -654,7 +654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 258.29993, y: -422}
+  m_AnchoredPosition: {x: 258.29993, y: -512}
   m_SizeDelta: {x: 220.7, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1109731916
@@ -786,7 +786,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -258.30002, y: -422}
+  m_AnchoredPosition: {x: -258.30002, y: -512}
   m_SizeDelta: {x: 220.7, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667672333
@@ -957,7 +957,7 @@ PrefabInstance:
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000011444
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
@@ -967,7 +967,7 @@ PrefabInstance:
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 585.5
+      value: 862.5
       objectReference: {fileID: 0}
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
@@ -1029,8 +1029,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: e7bf1ba777b0246459bca7b3331c95cb,
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 8700751356077829894, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f3a905898bac540b9b5d5b4f8d0f6f, type: 3}
 --- !u!224 &1721229788 stripped
@@ -1114,7 +1118,7 @@ PrefabInstance:
     - target: {fileID: 8664800000925623711, guid: 40d79d706f435bb4bb4888343e81bc05,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 411
+      value: 493
       objectReference: {fileID: 0}
     - target: {fileID: 8664800000925623711, guid: 40d79d706f435bb4bb4888343e81bc05,
         type: 3}

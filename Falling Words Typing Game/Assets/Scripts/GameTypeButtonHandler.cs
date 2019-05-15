@@ -9,20 +9,23 @@ public class GameTypeButtonHandler : MonoBehaviour
     * Main Menu - 0
     * Tutorial - 1
     * Story - 2
-    * DifficultySelector - 3
-    * Game - 4
-    * EndScreen - 5
-    * ScoreBoard - 6
+    * Game - 3
+    * Endscreen - 4
+    * ScoreBoard - 5
+    * EndlessRunner - 6
+    * GameType - 7
     */
 
     public void SinglePlayerMode()
     {
         Debug.Log("Single Player Mode is selected.");
+        UE.SceneManager.LoadScene(3);
     }
 
     public void EndlessRunnerMode()
     {
         Debug.Log("Endless Runner Mode is selected.");
+        UE.SceneManager.LoadScene(6);
     }
 
     public void TwoPlayerMode()
