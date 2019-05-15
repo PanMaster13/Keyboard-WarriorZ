@@ -23,11 +23,18 @@ public class PlayerController : MonoBehaviour
     public float Xmove;
 
     public float speed;
-    public float maxX;
-    public float minX;
+    private float maxX;
+    private float minX;
 
     public int health = 5;
     public Text healthDisplay;
+
+    void Start()
+    {
+        targetPos = transform.position;
+        maxX = transform.position.x + 300;
+        minX = transform.position.x - 300;
+    }
 
     // Update is called once per frame
     void Update()
