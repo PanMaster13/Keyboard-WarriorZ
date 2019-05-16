@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class Score : MonoBehaviour
 {
     public static int score = 0;
@@ -15,5 +15,12 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Score.score == 1)
+        {
+            ElapsedTime.endTime = "";
+            WordManager.difficultyValue = WordManager.Difficulty.Medium;
+            SceneManager.LoadScene("Game 1");
+        }
+
     }
 }

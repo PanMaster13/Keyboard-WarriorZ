@@ -9,7 +9,7 @@ public class GameTypeButtonHandler : MonoBehaviour
     * Main Menu - 0
     * Tutorial - 1
     * Story - 2
-    * Game - 3
+    * Level1 - 3
     * Endscreen - 4
     * ScoreBoard - 5
     * EndlessRunner - 6

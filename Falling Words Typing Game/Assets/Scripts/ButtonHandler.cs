@@ -39,7 +39,7 @@ public class ButtonHandler : MonoBehaviour
         Debug.Log("Rematch is pressed");
         Score.score = 0;
         ElapsedTime.endTime = "";
-        UE.SceneManager.LoadScene("Game");
+        UE.SceneManager.LoadScene("Level1");
     }
 
     public void QuitGame()

@@ -23,7 +23,7 @@ public class WordManager : MonoBehaviour {
 
     public Player player;
 
-    public Difficulty difficultyValue = Difficulty.Easy;
+    public static Difficulty difficultyValue = Difficulty.Easy;
 
     public enum Difficulty
     {
@@ -82,7 +82,6 @@ public class WordManager : MonoBehaviour {
     {
         Word word;
         word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord(activeWordtransform));
-        Debug.Log(word.word);
 
         words.Add(word);
     }
@@ -183,6 +182,7 @@ public class WordManager : MonoBehaviour {
 
     public void Update()
     {
+        Debug.Log(difficultyValue);
         for (int i = 0; i < words.Count; i++)
         {
             if (words[i].display != null)
