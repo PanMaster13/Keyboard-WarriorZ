@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
     private float timeBtwSpawn;
     public float startTimeBtwSpawn;
     public float decreaseTime;
-    public float minTime = 1.5f;
+    public float minTime = 1f;
 
     void Update()
     {

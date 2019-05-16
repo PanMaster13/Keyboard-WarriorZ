@@ -401,7 +401,7 @@ MonoBehaviour:
   - {fileID: 4922866066347028468, guid: 6a54b1ffbdd62dd49b88e7a2ebd1d452, type: 3}
   startTimeBtwSpawn: 4
   decreaseTime: 0.1
-  minTime: 2.5
+  minTime: 1
 --- !u!1 &610929604
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,8 +888,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Xmove: 300
   speed: 5000
-  maxX: 300
-  minX: -300
   health: 5
   healthDisplay: {fileID: 1253816276}
 --- !u!50 &1068979654

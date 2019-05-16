@@ -5,13 +5,12 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     public int damage = 1;
-    public float speed;
 
     public GameObject ooofffSound;
 
     void Update()
     {
-        transform.Translate(Vector2.down * speed * Time.deltaTime);
+        transform.Translate(Vector2.down * 500 * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)

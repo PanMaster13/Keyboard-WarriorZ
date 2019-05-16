@@ -121,7 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 150
   ooofffSound: {fileID: 622071444716705956, guid: d68dcdc29ab05564aa9aa11ce4715af4,
     type: 3}
 --- !u!114 &4892505649367527634
@@ -136,4 +135,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 076edc6de96b91843ad7af2b316108d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 10
+  lifetime: 5
