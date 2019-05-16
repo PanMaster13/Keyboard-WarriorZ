@@ -6,16 +6,18 @@ using UnityEngine.SceneManagement;
 public class Score : MonoBehaviour
 {
     public static int score = 0;
-
+    public static Scene scene;
     // Start is called before the first frame update
     void Start()
     {
+        scene = SceneManager.GetActiveScene();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Score.score == 1)
+        //Debug.Log(scene.name+" "+WordManager.difficultyValue);
+        if (Score.score == 1 && scene.name.Equals("Game"))
         {
             ElapsedTime.endTime = "";
             WordManager.difficultyValue = WordManager.Difficulty.Medium;

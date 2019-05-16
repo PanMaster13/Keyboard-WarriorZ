@@ -182,7 +182,6 @@ public class WordManager : MonoBehaviour {
 
     public void Update()
     {
-        Debug.Log(difficultyValue);
         for (int i = 0; i < words.Count; i++)
         {
             if (words[i].display != null)
