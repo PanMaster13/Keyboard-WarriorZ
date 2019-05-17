@@ -13,6 +13,7 @@ public class PlayerUI : MonoBehaviour
     //These are texts for score and invincibility bar
     public Text scoreText;
     public Text invinBarText;
+    public Text invinPromptText;
 
     //Store an player object to access its stats
     public Player player;
@@ -37,10 +38,31 @@ public class PlayerUI : MonoBehaviour
     {
         if (amt >= 0)
         {
-            invinBarFill.localScale = new Vector3((float)amt * 0.05f, 1f, 1f);
-            if (amt >= 20)
+            if (WordManager.difficultyValue == WordManager.Difficulty.Easy)
             {
-                invinBarText.gameObject.SetActive(true);
+                invinBarFill.localScale = new Vector3((float)amt * 0.1f, 1f, 1f);
+                if (amt == 10)
+                {
+                    invinBarText.gameObject.SetActive(true);
+                    invinPromptText.gameObject.SetActive(true);
+                }
+            }
+            if (WordManager.difficultyValue == WordManager.Difficulty.Medium)
+            {
+                invinBarFill.localScale = new Vector3((float)amt * 0.05f, 1f, 1f);
+                if (amt == 20) {
+                    invinBarText.gameObject.SetActive(true);
+                    invinPromptText.gameObject.SetActive(true);
+                 }
+            }
+            if (WordManager.difficultyValue == WordManager.Difficulty.Hard)
+            {
+                invinBarFill.localScale = new Vector3((float)amt * 0.033f, 1f, 1f);
+                if (amt == 30)
+                {
+                    invinBarText.gameObject.SetActive(true);
+                    invinPromptText.gameObject.SetActive(true);
+                }
             }
         }
     }

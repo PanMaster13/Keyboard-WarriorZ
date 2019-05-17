@@ -120,9 +120,18 @@ public class WordManager : MonoBehaviour {
             hasActiveWord = false;
             //Add one to score
             Score.score = Score.score + scoreValue;
-            //if invinPoints less than 20, add one.
-            if (player.invinPoints < 20 && player.invinLock == false)
-                player.invinPoints++;
+            if (difficultyValue == Difficulty.Easy)
+                //if invinPoints less than 10, add one.
+                if (player.invinPoints < 10 && player.invinLock == false)
+                    player.invinPoints++;
+            if (difficultyValue == Difficulty.Medium)
+                //if invinPoints less than 20, add one.
+                if (player.invinPoints < 20 && player.invinLock == false)
+                    player.invinPoints++;
+            if (difficultyValue == Difficulty.Hard)
+                //if invinPoints less than 30, add one.
+                if (player.invinPoints < 30 && player.invinLock == false)
+                    player.invinPoints++;
             //Check if the word is a buff or not
             bool buffResult = checkBuff(activeWord.word);
             if (buffResult)
