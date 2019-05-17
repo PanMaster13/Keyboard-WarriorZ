@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Game.unity
     guid: 5f7b96be52ae91943a556abaf2c05bf3
   - enabled: 1
+    path: Assets/Game 1.unity
+    guid: 22c03fe226134da4383252f93e53356f
+  - enabled: 1
+    path: Assets/Game 2.unity
+    guid: 6d5c4631ab90d4a42bcb5e3fa854605d
+  - enabled: 1
     path: Assets/EndScreen.unity
     guid: 6834b3590b5a7ee4e82f967e06161441
   - enabled: 1
@@ -32,9 +38,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Test.unity
     guid: 04c1e370aa1c66b4fa9a67f20b39aaa4
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/2PlayerMode.unity
     guid: bf111ea82ab38bc49ae5dfa8b0a459d9
