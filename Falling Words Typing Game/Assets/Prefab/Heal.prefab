@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2953822095128919948}
   - component: {fileID: 2953822095128919947}
   - component: {fileID: 2953822095128919946}
-  - component: {fileID: 2953822095128919945}
   - component: {fileID: 4892505649367527634}
+  - component: {fileID: 1538488932422781930}
   m_Layer: 0
-  m_Name: Obstacle
+  m_Name: Heal
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2953822095128919949}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 430, z: 0}
-  m_LocalScale: {x: 70, y: 70, z: 1}
+  m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9b93e2258047884792893c53eb81763, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df51074351cc6cc4ca919d1a8691300b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 1.75}
+    oldSize: {x: 10.67, y: 7.98}
     newSize: {x: 2, y: 1.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -108,21 +108,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.5}
   m_EdgeRadius: 0
---- !u!114 &2953822095128919945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2953822095128919949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d327227e1aed0b468df815a4b19878a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  ooofffSound: {fileID: 622071444716705956, guid: d68dcdc29ab05564aa9aa11ce4715af4,
-    type: 3}
 --- !u!114 &4892505649367527634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,3 +121,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 5
+--- !u!114 &1538488932422781930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2953822095128919949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07975ae43c2e80a46b2a31553caaa9f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heal: 1

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject[] obstaclePatterns;
+    public GameObject[] healPatterns;
 
     private float timeBtwSpawn;
     public float startTimeBtwSpawn;

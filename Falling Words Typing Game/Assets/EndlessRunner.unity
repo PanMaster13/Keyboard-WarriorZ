@@ -399,6 +399,7 @@ MonoBehaviour:
   - {fileID: 9113178715518692887, guid: fa120253a6f1a5945abd003b5ab6d696, type: 3}
   - {fileID: 4106828556668467832, guid: 7356d9b411eedae47a0e8c557e64ed68, type: 3}
   - {fileID: 4922866066347028468, guid: 6a54b1ffbdd62dd49b88e7a2ebd1d452, type: 3}
+  healPatterns: []
   startTimeBtwSpawn: 4
   decreaseTime: 0.1
   minTime: 1
