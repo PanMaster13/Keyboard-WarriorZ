@@ -22,6 +22,8 @@ public class WordManager : MonoBehaviour {
     public int scoreValue = 1;
 
     public Player player;
+    public PlayerController runnerPlayer;
+    public Spawner theSpawner;
 
     public static Difficulty difficultyValue = Difficulty.Easy;
 
@@ -159,6 +161,7 @@ public class WordManager : MonoBehaviour {
         if (word == "slowbuff")
         {
             fallSpeed = fallSpeed - 0.2f;
+            theSpawner.startTimeBtwSpawn = theSpawner.startTimeBtwSpawn + 1;
             isBuff = true;
         }
         else if (word == "speedbuff")
@@ -172,6 +175,7 @@ public class WordManager : MonoBehaviour {
             {
                 player.healthPoints++;
                 isBuff = true;
+                runnerPlayer.health++;
             }
         }
 

@@ -713,7 +713,7 @@ PrefabInstance:
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000042916
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
@@ -723,7 +723,7 @@ PrefabInstance:
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 774.8
+      value: 1705.2
       objectReference: {fileID: 0}
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
@@ -778,11 +778,12 @@ PrefabInstance:
     - target: {fileID: 8700751356077829894, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
       propertyPath: m_Text
-      value: Choose between 3 game modes. Single player mode will consists of levels
-        where players have to type the words on the screen before they hit the ground.
-        Endless runner is pretty obvious, where you keep running while avoiding obstacles.
-        2 player mode will be a combination of single player mode and endless runner
-        mode where the 2 players support each other via buffs.
+      value: "Choose between 3 game modes. \n\nA) Single player mode will consists
+        of levels where players have to type the words on the screen before they hit
+        the ground. \n\nB) Endless runner is pretty obvious, where you keep running
+        while avoiding obstacles. \n\nC) 2 player mode will be a combination of single
+        player mode and endless runner mode where the 2 players support each other
+        via buffs."
       objectReference: {fileID: 0}
     - target: {fileID: 8700751356077829894, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
@@ -797,6 +798,11 @@ PrefabInstance:
     - target: {fileID: 8700751356077829894, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
       propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700751356077829894, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

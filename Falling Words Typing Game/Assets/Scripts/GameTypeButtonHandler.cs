@@ -6,14 +6,18 @@ public class GameTypeButtonHandler : MonoBehaviour
 {
     /*
     * Build Index Reference (For LoadScene Function)
-    * Main Menu - 0
+    * MainMenu - 0
     * Tutorial - 1
     * Story - 2
-    * Level1 - 3
-    * Endscreen - 4
-    * ScoreBoard - 5
-    * EndlessRunner - 6
-    * GameType - 7
+    * Game - 3
+    * Game 1 - 4
+    * Game 2 - 5
+    * EndScreen - 6
+    * ScoreBoard - 7
+    * EndlessRunner - 8
+    * GameType - 9
+    * Test - 10
+    * 2PlayerMode - 11
     */
 
     public void SinglePlayerMode()
@@ -25,13 +29,13 @@ public class GameTypeButtonHandler : MonoBehaviour
     public void EndlessRunnerMode()
     {
         Debug.Log("Endless Runner Mode is selected.");
-        UE.SceneManager.LoadScene(6);
+        UE.SceneManager.LoadScene(8);
     }
 
     public void TwoPlayerMode()
     {
         Debug.Log("Two Player Mode is selected.");
-        UE.SceneManager.LoadScene("2PlayerMode");
+        UE.SceneManager.LoadScene(11);
     }
 
     public void ToMainMenu()
