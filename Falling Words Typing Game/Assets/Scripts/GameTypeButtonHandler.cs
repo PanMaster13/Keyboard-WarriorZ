@@ -31,6 +31,7 @@ public class GameTypeButtonHandler : MonoBehaviour
     public void TwoPlayerMode()
     {
         Debug.Log("Two Player Mode is selected.");
+        UE.SceneManager.LoadScene("2PlayerMode");
     }
 
     public void ToMainMenu()
