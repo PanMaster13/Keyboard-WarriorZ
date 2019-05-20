@@ -71,4 +71,10 @@ public class PlayerUI : MonoBehaviour
     {
         scoreText.text = "Score: " + Score.score.ToString();
     }
+
+    public void disableText()
+    {
+        invinBarText.gameObject.SetActive(false);
+        invinPromptText.gameObject.SetActive(false);
+    }
 }

@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public int invinPoints;
     public bool invinLock;
     public bool healthLock;
+    public PlayerUI playerUI;
 
     public Player()
     {
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
     public void useInvinBuff()
     {
         StartCoroutine(Delay());
+        playerUI.disableText();
     }
 
     IEnumerator Delay()
