@@ -8,7 +8,7 @@ public class ScoreManager : MonoBehaviour
 {
     public int score;
     public Text scoreDisplay;
-
+    public static int endScore;
     void Update()
     {
         scoreDisplay.text = "Score: " + score.ToString();
@@ -19,7 +19,13 @@ public class ScoreManager : MonoBehaviour
         if(other.CompareTag("Obstacle"))
         {
             score++;
+            endScore++;
             Debug.Log(score);
         }
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }

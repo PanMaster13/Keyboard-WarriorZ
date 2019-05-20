@@ -10,13 +10,18 @@ public class PlayerController : MonoBehaviour
 {
     /*
     * Build Index Reference (For LoadScene Function)
-    * Main Menu - 0
+    * MainMenu - 0
     * Tutorial - 1
     * Story - 2
-    * DifficultySelector - 3
-    * Game - 4
-    * EndScreen - 5
-    * ScoreBoard - 6
+    * Game - 3
+    * Game 1 - 4
+    * Game 2 - 5
+    * EndScreen - 6
+    * ScoreBoard - 7
+    * EndlessRunner - 8
+    * GameType - 9
+    * Test - 10
+    * 2PlayerMode - 11
     */
 
     private Vector2 targetPos;
@@ -32,8 +37,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         targetPos = transform.position;
-        maxX = transform.position.x + 300;
-        minX = transform.position.x - 300;
+        maxX = transform.position.x + 299;
+        minX = transform.position.x - 299;
     }
 
     // Update is called once per frame
@@ -43,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
-            UE.SceneManager.LoadScene(UE.SceneManager.GetActiveScene().buildIndex);
+            UE.SceneManager.LoadScene("EndScreen 1");
         }
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);

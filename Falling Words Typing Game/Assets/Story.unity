@@ -654,7 +654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 258.29993, y: -512}
+  m_AnchoredPosition: {x: 265, y: -488}
   m_SizeDelta: {x: 220.7, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1109731916
@@ -786,7 +786,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -258.30002, y: -512}
+  m_AnchoredPosition: {x: -265, y: -488}
   m_SizeDelta: {x: 220.7, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667672333
@@ -952,22 +952,22 @@ PrefabInstance:
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000015259
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 8
+      value: -7.3
       objectReference: {fileID: 0}
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 737.3
+      value: 1794.1
       objectReference: {fileID: 0}
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 862.5
+      value: 832
       objectReference: {fileID: 0}
     - target: {fileID: 8700751356077829895, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
@@ -1007,18 +1007,18 @@ PrefabInstance:
         it filled with letters and characters (kinda like the Matrix). A hooded figure
         approaches you and tells you that you are one of the victims of the \x1Cabduction\x1D.
         It then shows you a keypad-like board strapped with a handle around your waist.
-        Next thing you know, words started falling all around the place, creating
+        \n\nNext thing you know, words started falling all around the place, creating
         explosions as they come into contact with anything. The hooded figure tells
         you to type the words to defend yourself. It also says that dying is possible
-        in this realm, only that it is not permanent, and you\x19ll resurrect again.
-        As you struggle to fight for your freedom, questions mingle around your mind.
-        What is this place? Who is responsible of this? And most importantly, can
-        you ever leave this place? Well, that would be a story for another time..."
+        in this realm, only that it is not permanent, and you\x19'll resurrect again.
+        \n\nAs you struggle to fight for your freedom, questions mingle around your
+        mind. What is this place? Who is responsible of this? And most importantly,
+        can you ever leave this place? Well, that would be a story for another time..."
       objectReference: {fileID: 0}
     - target: {fileID: 8700751356077829894, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8700751356077829894, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
@@ -1034,6 +1034,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_LineSpacing
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700751356077829894, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f3a905898bac540b9b5d5b4f8d0f6f, type: 3}

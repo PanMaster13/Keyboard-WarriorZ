@@ -6,14 +6,18 @@ public class PauseButtonHandler : MonoBehaviour
 {
     /*
     * Build Index Reference (For LoadScene Function)
-    * Main Menu - 0
+    * MainMenu - 0
     * Tutorial - 1
     * Story - 2
     * Game - 3
-    * Endscreen - 4
-    * ScoreBoard - 5
-    * EndlessRunner - 6
-    * GameType - 7
+    * Game 1 - 4
+    * Game 2 - 5
+    * EndScreen - 6
+    * ScoreBoard - 7
+    * EndlessRunner - 8
+    * GameType - 9
+    * Test - 10
+    * 2PlayerMode - 11
     */
 
     public static bool GameIsPaused = false;
