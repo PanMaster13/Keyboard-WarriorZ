@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
-            UE.SceneManager.LoadScene("EndScreen 1");
+            UE.SceneManager.LoadScene("EndScreen 2");
         }
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
