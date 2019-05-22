@@ -34,21 +34,31 @@ public class PlayerController : MonoBehaviour
     public int health = 5;
     public Text healthDisplay;
 
+    public static UE.Scene scene;
     void Start()
     {
         targetPos = transform.position;
         maxX = transform.position.x + 299;
         minX = transform.position.x - 299;
+        scene = UE.SceneManager.GetActiveScene();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(scene.name);
         healthDisplay.text = "HP: " + health.ToString();
 
         if (health <= 0)
         {
-            UE.SceneManager.LoadScene("EndScreen 2");
+            if (scene.name.Equals("2PlayerMode"))
+            {
+                UE.SceneManager.LoadScene("EndScreen 2");
+            }
+            else
+            {
+                UE.SceneManager.LoadScene("EndScreen 1");
+            }
         }
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);

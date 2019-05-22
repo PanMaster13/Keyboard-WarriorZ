@@ -25,7 +25,7 @@ public class WordManager : MonoBehaviour {
     public PlayerController runnerPlayer;
     public Spawner theSpawner;
 
-    public static Scene scene;
+    
     public static Difficulty difficultyValue = Difficulty.Easy;
 
     public enum Difficulty
@@ -186,17 +186,12 @@ public class WordManager : MonoBehaviour {
     public void EndGame()
     {
         gameOverdisplay.SetActive(true);
-        if (scene.name.Equals("2PlayerMode"))
-        {
-            SceneManager.LoadScene("EndScreen 2");
-        }
         SceneManager.LoadScene("EndScreen");
     }
 
     public void Start()
     {
         setDifficulty();
-        scene = SceneManager.GetActiveScene();
     }
 
     public void Update()

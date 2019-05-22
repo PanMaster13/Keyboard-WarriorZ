@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class WordTimer : MonoBehaviour {
 
 	public WordManager wordManager;
@@ -19,11 +19,14 @@ public class WordTimer : MonoBehaviour {
     private int randSeconds;
     private float prevTime;
 
+    public static Scene scene;
+
     private void Start()
     {
         startTime = Time.time;
         randSeconds = Random.Range(10, 20);
         prevTime = Time.time;
+        scene = SceneManager.GetActiveScene();
     }
     private void Update()
 	{
@@ -41,12 +44,20 @@ public class WordTimer : MonoBehaviour {
 			nextWordTime = Time.time + wordDelay;
 			wordDelay *= .99f;
 		}
+        
         if (wordManager.player.healthPoints == 0)
         {
-            ElapsedTime.endTime += minutes+":"+seconds;
-            wpm = Score.score / 5;
-            WPM.wpm += wpm.ToString();
-            wordManager.EndGame();
+            if (scene.name.Equals("2PlayerMode"))
+            {
+                SceneManager.LoadScene("EndScreen 2");
+            }
+            else
+            {
+                ElapsedTime.endTime += minutes + ":" + seconds;
+                wpm = Score.score / 5;
+                WPM.wpm += wpm.ToString();
+                wordManager.EndGame();
+            }
         }
     }
 
