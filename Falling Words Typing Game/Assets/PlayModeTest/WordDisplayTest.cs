@@ -42,8 +42,6 @@ namespace Tests
         [UnityTest]
         public IEnumerator WordDisplayRemoveWordTest()
         {
-            GameObject actual;
-
             var wordDisplay = new GameObject().AddComponent<WordDisplay>();
             wordDisplay.effect = new GameObject();
             wordDisplay.text = new GameObject().AddComponent<Text>();

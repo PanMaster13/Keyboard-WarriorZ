@@ -7,11 +7,17 @@ using UnityEngine.UI;
 public class Word {
 
 	public string word;
-	private int typeIndex;
+	public int typeIndex;
     public Text buffText;
 	public WordDisplay display;
     private int typeValue;
     public GameObject effect;
+
+    //For Testing
+    public Word(string _word)
+    {
+        word = _word;
+    }
 
 	public Word (string _word, WordDisplay _display)
 	{
