@@ -377,6 +377,7 @@ MonoBehaviour:
   invinPoints: 0
   invinLock: 0
   healthLock: 0
+  playerUI: {fileID: 0}
 --- !u!4 &268437743
 Transform:
   m_ObjectHideFlags: 0
@@ -616,6 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90cbdb580ce4864db936f3eb5560c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsPaused: 0
   pauseMenuUI: {fileID: 1202292219}
 --- !u!114 &380745698
 MonoBehaviour:
@@ -2952,8 +2954,8 @@ MonoBehaviour:
   initialPlayerHealth: 0
   scoreValue: 1
   player: {fileID: 268437742}
-  runnerPlayer: {fileID: 0}
-  theSpawner: {fileID: 0}
+  runnerPlayer: {fileID: 1911643686}
+  theSpawner: {fileID: 859462412}
 --- !u!1 &1867747213
 GameObject:
   m_ObjectHideFlags: 0
