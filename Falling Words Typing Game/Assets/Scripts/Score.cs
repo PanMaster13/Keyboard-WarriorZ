@@ -17,13 +17,13 @@ public class Score : MonoBehaviour
     void Update()
     {
         //Debug.Log(scene.name+" "+WordManager.difficultyValue);
-        if (Score.score == 30 && scene.name.Equals("Game"))
+        if (Score.score >= 30 && scene.name.Equals("Game"))
         {
             ElapsedTime.endTime = "";
             WordManager.difficultyValue = WordManager.Difficulty.Medium;
             SceneManager.LoadScene("Game 1");
         }
-        if (Score.score == 80 && scene.name.Equals("Game"))
+        if (Score.score >= 80 && scene.name.Equals("Game 1"))
         {
             ElapsedTime.endTime = "";
             WordManager.difficultyValue = WordManager.Difficulty.Hard;
