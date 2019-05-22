@@ -308,7 +308,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 111207857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 136f5b48586a05f47a8a9337dff3ba8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 18bf0baa394f1eb41ad03806e52c8c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &175432935
@@ -701,7 +701,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 111207861}
-        m_MethodName: Tutorial
+        m_MethodName: AboutGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -833,7 +833,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 111207861}
-        m_MethodName: MainMenu
+        m_MethodName: ToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -20,7 +20,7 @@ public class PauseButtonHandler : MonoBehaviour
     * 2PlayerMode - 11
     */
 
-    public static bool GameIsPaused = false;
+    public bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
     // Update is called once per frame

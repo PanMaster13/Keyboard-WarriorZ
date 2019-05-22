@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EndScreen 1.unity
     guid: 7c2059a001571f54480b147c0e9546f5
+  - enabled: 1
+    path: Assets/EndScreen 2.unity
+    guid: 80ed136bbde560943a2fb6a47aed1c2e
   m_configObjects: {}

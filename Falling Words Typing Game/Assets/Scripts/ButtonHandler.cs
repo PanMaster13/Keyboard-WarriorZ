@@ -20,13 +20,14 @@ public class ButtonHandler : MonoBehaviour
     * 2PlayerMode - 11
     */
 
+    // This section is for Main Menu.
     public void PlayGame()
     {
         Debug.Log("Play is pressed");
         UE.SceneManager.LoadScene(9);
     }
 
-    public void AboutGame()
+    public void AboutGame() // Go to Tutorial Menu
     {
         Debug.Log("About is pressed");
         UE.SceneManager.LoadScene(1); 
@@ -38,6 +39,54 @@ public class ButtonHandler : MonoBehaviour
         UE.SceneManager.LoadScene(7);
     }
 
+    public void QuitGame()
+    {
+        Debug.Log("Quit is pressed");
+        Application.Quit(); // Only quits the game when you export it
+    }
+
+    // ************************************************************************
+
+    // This section is for Game Type Menu
+    public void SinglePlayerMode()
+    {
+        Debug.Log("Single Player Mode is selected.");
+        UE.SceneManager.LoadScene(3);
+    }
+
+    public void EndlessRunnerMode()
+    {
+        Debug.Log("Endless Runner Mode is selected.");
+        UE.SceneManager.LoadScene(8);
+    }
+
+    public void TwoPlayerMode()
+    {
+        Debug.Log("Two Player Mode is selected.");
+        UE.SceneManager.LoadScene(11);
+    }
+
+    // ************************************************************************
+
+    // This section is for Difficulty Selection Menu
+    public void EasyMode()
+    {
+        Debug.Log("Easy Mode was Selected");
+    }
+
+    public void MediumMode()
+    {
+        Debug.Log("Medium Mode was Selected");
+    }
+
+    public void HardMode()
+    {
+        Debug.Log("Hard Mode was Selected");
+    }
+
+    // ************************************************************************
+
+    // Rematch Function.
     public void Rematch()
     {
         Debug.Log("Rematch is pressed");
@@ -46,9 +95,21 @@ public class ButtonHandler : MonoBehaviour
         UE.SceneManager.LoadScene("Level1");
     }
 
-    public void QuitGame()
+    // ************************************************************************
+
+    // Proceed to Main Menu Function.
+    public void ToMainMenu()
     {
-        Debug.Log("Quit is pressed");
-        Application.Quit(); // Only quits the game when you export it
+        Debug.Log("Main Menu was Selected");
+        UE.SceneManager.LoadScene(0);
+    }
+
+    // ************************************************************************
+
+    // Proceed to Story Menu
+    public void Story()
+    {
+        Debug.Log("Story is pressed");
+        UE.SceneManager.LoadScene(2);
     }
 }
