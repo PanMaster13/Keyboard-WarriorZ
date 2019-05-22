@@ -87,13 +87,30 @@ public class ButtonHandler : MonoBehaviour
     // ************************************************************************
 
     // Rematch Function.
-    public void Rematch()
+    public void WordRematch()
     {
         Debug.Log("Rematch is pressed");
         Score.score = 0;
         ElapsedTime.endTime = "";
-        UE.SceneManager.LoadScene("Level1");
+        UE.SceneManager.LoadScene("Game");
     }
+
+    public void ERRematch()
+    {
+        Debug.Log("Rematch is pressed");
+        ScoreManager.endScore = 0;
+        UE.SceneManager.LoadScene("EndlessRunner");
+    }
+
+    public void TwoPRematch()
+    {
+        Debug.Log("Rematch is pressed");
+        TwoPlayerScore.endScore = 0;
+        Score.score = 0;
+
+        UE.SceneManager.LoadScene("2PlayerMode");
+    }
+
 
     // ************************************************************************
 
