@@ -119,6 +119,20 @@ public class ButtonHandler : MonoBehaviour
     {
         Debug.Log("Main Menu was Selected");
         UE.SceneManager.LoadScene(0);
+        if(UE.SceneManager.GetActiveScene().name == "EndScreen")
+        {
+            Score.score = 0;
+            ElapsedTime.endTime = "";
+        }
+        if(UE.SceneManager.GetActiveScene().name == "EndScreen 1")
+        {
+            ScoreManager.endScore = 0;
+        }
+        if(UE.SceneManager.GetActiveScene().name == "EndScreen 2")
+        {
+            TwoPlayerScore.endScore = 0;
+            Score.score = 0;
+        }
     }
 
     // ************************************************************************

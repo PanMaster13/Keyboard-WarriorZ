@@ -41,8 +41,7 @@ public class HighScore : MonoBehaviour
             string filepath = Application.dataPath + "/score.txt";
             using (StreamWriter sw = new StreamWriter(filepath))
             {
-                sw.WriteLine(intHiScore.ToString() +
-                    "\n" + intGameScore.ToString());
+                sw.WriteLine(intHiScore.ToString());
             }
         }
         else
@@ -52,8 +51,7 @@ public class HighScore : MonoBehaviour
             string filepath = Application.dataPath + "/score.txt";
             using (StreamWriter sw = new StreamWriter(filepath))
             {
-                sw.WriteLine(intHiScore.ToString() +
-                    "\n" + intGameScore.ToString());
+                sw.WriteLine(intHiScore.ToString());
             }
         }
         text.text = "High Score: " + testText;
