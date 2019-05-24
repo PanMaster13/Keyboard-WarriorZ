@@ -25,6 +25,7 @@ public class WordManager : MonoBehaviour {
     public PlayerController runnerPlayer;
     public Spawner theSpawner;
 
+    public GameObject typesound;
     
     public static Difficulty difficultyValue = Difficulty.Easy;
 
@@ -102,6 +103,7 @@ public class WordManager : MonoBehaviour {
                 if (activeWord.GetNextLetter() == letter)
                 {
                     activeWord.TypeLetter();
+                    Instantiate(typesound, transform.position, Quaternion.identity);
                 }
             }
 		} else

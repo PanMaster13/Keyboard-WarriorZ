@@ -1820,6 +1820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90cbdb580ce4864db936f3eb5560c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsPaused: 0
   pauseMenuUI: {fileID: 637703055}
 --- !u!1 &1506127305
 GameObject:
@@ -1862,6 +1863,8 @@ MonoBehaviour:
   player: {fileID: 432780447}
   runnerPlayer: {fileID: 0}
   theSpawner: {fileID: 0}
+  typesound: {fileID: 8277854852805076096, guid: 452433bdd8cc59d4a82d5be996e2d6ec,
+    type: 3}
 --- !u!4 &1506127307
 Transform:
   m_ObjectHideFlags: 0
