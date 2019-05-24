@@ -115,7 +115,8 @@ public class WordManager : MonoBehaviour {
 					activeWord = word;
 					hasActiveWord = true;
 					word.TypeLetter();
-					break;
+                    Instantiate(typesound, transform.position, Quaternion.identity);
+                    break;
 				}
 			}
 		}
