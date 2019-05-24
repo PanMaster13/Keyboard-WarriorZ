@@ -7,7 +7,7 @@ public class ButtonHandler : MonoBehaviour
     /*
     * Build Index Reference (For LoadScene Function)
     * MainMenu - 0
-    * Tutorial - 1
+    * About - 1
     * Story - 2
     * Game - 3
     * Game 1 - 4
@@ -18,6 +18,9 @@ public class ButtonHandler : MonoBehaviour
     * GameType - 9
     * Test - 10
     * 2PlayerMode - 11
+    * EndScreen 1 - 12
+    * EndScreen 2 - 13
+    * Instructions - 14
     */
 
     // This section is for Main Menu.
@@ -142,5 +145,12 @@ public class ButtonHandler : MonoBehaviour
     {
         Debug.Log("Story is pressed");
         UE.SceneManager.LoadScene(2);
+    }
+
+    //Proceed to Instructions page
+    public void Instructions()
+    {
+        Debug.Log("Instructions is pressed");
+        UE.SceneManager.LoadScene(14);
     }
 }
