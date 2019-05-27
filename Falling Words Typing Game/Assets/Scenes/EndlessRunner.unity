@@ -515,6 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90cbdb580ce4864db936f3eb5560c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsPaused: 0
   pauseMenuUI: {fileID: 2104381518}
 --- !u!1 &733800632
 GameObject:
@@ -888,7 +889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Xmove: 300
-  speed: 5000
+  speed: 100000
   health: 5
   healthDisplay: {fileID: 1253816276}
 --- !u!50 &1068979654
