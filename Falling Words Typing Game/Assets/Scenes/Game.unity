@@ -322,7 +322,7 @@ MonoBehaviour:
   invinPoints: 0
   invinLock: 0
   healthLock: 0
-  playerUI: {fileID: 0}
+  playerUI: {fileID: 571296448}
 --- !u!4 &432780448
 Transform:
   m_ObjectHideFlags: 0

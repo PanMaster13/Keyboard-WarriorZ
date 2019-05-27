@@ -377,7 +377,7 @@ MonoBehaviour:
   invinPoints: 0
   invinLock: 0
   healthLock: 0
-  playerUI: {fileID: 0}
+  playerUI: {fileID: 726448784}
 --- !u!4 &268437743
 Transform:
   m_ObjectHideFlags: 0
@@ -2956,6 +2956,8 @@ MonoBehaviour:
   player: {fileID: 268437742}
   runnerPlayer: {fileID: 1911643686}
   theSpawner: {fileID: 859462412}
+  typesound: {fileID: 8277854852805076096, guid: 452433bdd8cc59d4a82d5be996e2d6ec,
+    type: 3}
 --- !u!1 &1867747213
 GameObject:
   m_ObjectHideFlags: 0

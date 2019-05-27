@@ -16,11 +16,10 @@ public class ButtonHandler : MonoBehaviour
     * ScoreBoard - 7
     * EndlessRunner - 8
     * GameType - 9
-    * Test - 10
-    * 2PlayerMode - 11
-    * EndScreen 1 - 12
-    * EndScreen 2 - 13
-    * Instructions - 14
+    * 2PlayerMode - 10
+    * EndScreen 1 - 11
+    * EndScreen 2 - 12
+    * Instructions - 13
     */
 
     // This section is for Main Menu.
@@ -66,7 +65,7 @@ public class ButtonHandler : MonoBehaviour
     public void TwoPlayerMode()
     {
         Debug.Log("Two Player Mode is selected.");
-        UE.SceneManager.LoadScene(11);
+        UE.SceneManager.LoadScene(10);
     }
 
     // ************************************************************************
@@ -151,6 +150,6 @@ public class ButtonHandler : MonoBehaviour
     public void Instructions()
     {
         Debug.Log("Instructions is pressed");
-        UE.SceneManager.LoadScene(14);
+        UE.SceneManager.LoadScene(13);
     }
 }

@@ -165,7 +165,6 @@ public class WordManager : MonoBehaviour {
         if (word == "slowbuff")
         {
             fallSpeed = fallSpeed - 0.2f;
-            theSpawner.startTimeBtwSpawn = theSpawner.startTimeBtwSpawn + 1;
             isBuff = true;
         }
         else if (word == "speedbuff")

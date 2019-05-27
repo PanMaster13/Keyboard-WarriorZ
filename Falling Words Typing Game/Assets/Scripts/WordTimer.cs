@@ -23,7 +23,7 @@ public class WordTimer : MonoBehaviour {
 
     private void Start()
     {
-        startTime = Time.time;
+        startTime = 0f;
         randSeconds = Random.Range(10, 20);
         prevTime = Time.time;
         scene = SceneManager.GetActiveScene();
