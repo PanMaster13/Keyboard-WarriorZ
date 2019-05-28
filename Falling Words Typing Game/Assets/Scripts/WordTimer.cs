@@ -23,7 +23,10 @@ public class WordTimer : MonoBehaviour {
 
     private void Start()
     {
-        startTime = 0f;
+        if (SceneManager.GetActiveScene().name == "Game" || SceneManager.GetActiveScene().name == "2PlayerMode")
+        {
+            startTime = Time.time;
+        }
         randSeconds = Random.Range(10, 20);
         prevTime = Time.time;
         scene = SceneManager.GetActiveScene();

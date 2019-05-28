@@ -121,19 +121,22 @@ public class ButtonHandler : MonoBehaviour
     {
         Debug.Log("Main Menu was Selected");
         UE.SceneManager.LoadScene(0);
-        if(UE.SceneManager.GetActiveScene().name == "EndScreen")
+        if(UE.SceneManager.GetActiveScene().name == "EndScreen" || UE.SceneManager.GetActiveScene().name == "Game" || UE.SceneManager.GetActiveScene().name == "Game 1" || UE.SceneManager.GetActiveScene().name == "Game 2")
         {
             Score.score = 0;
             ElapsedTime.endTime = "";
+            Time.timeScale = 1f;
         }
-        if(UE.SceneManager.GetActiveScene().name == "EndScreen 1")
+        if(UE.SceneManager.GetActiveScene().name == "EndScreen 1" || UE.SceneManager.GetActiveScene().name == "EndlessRunner")
         {
             ScoreManager.endScore = 0;
+            Time.timeScale = 1f;
         }
-        if(UE.SceneManager.GetActiveScene().name == "EndScreen 2")
+        if(UE.SceneManager.GetActiveScene().name == "EndScreen 2" || UE.SceneManager.GetActiveScene().name == "2PlayerMode")
         {
             TwoPlayerScore.endScore = 0;
             Score.score = 0;
+            Time.timeScale = 1f;
         }
     }
 
