@@ -622,12 +622,12 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Features in each mode
 
-        Easy mode - slower speed, slowbuff, healthbuff, invincibility bar.
+        Level 1 - Slower speed, slowbuff, healthbuff, invincibility bar.
 
-        Medium Mode - All of the above + fast speed, words that if typed will spawn
-        another word, speedbuff.
+        Level 2 - All of the above + fast speed, words that if typed will spawn another
+        word, speedbuff.
 
-        Hard Mode - All of the above + faster speed, words that move around, red words.
+        Level 3 - All of the above + faster speed, words that move around, red words.
 
 
         <b>B) Endless Runner</b>
@@ -883,13 +883,13 @@ PrefabInstance:
         the words.\n\"healthbuff\" = Restore health by 1.\nExtras:\nRed words = Will
         deduct hp by 1 if typed.\nInvincibility bar - Player can collect points by
         typing words. Bar can be consumed once full to give the players 10 seconds
-        of invincibility. It gets harder to fill the bar as the level progresses.\nEasy
-        - 10 Points\nMedium - 20 Points.\nHard - 30 Points.\n\nFeatures in each mode\nEasy
-        mode - slower speed, slowbuff, healthbuff, invincibility bar.\nMedium Mode
-        - All of the above + fast speed, words that if typed will spawn another word,
-        speedbuff.\nHard Mode - All of the above + faster speed, words that move around,
-        red words.\n\n\nB) Endless runner is pretty obvious, where you keep running
-        while avoiding obstacles. \n"
+        of invincibility. It gets harder to fill the bar as the level progresses.\nLevel
+        1 - 10 Points\nLevel 2 - 20 Points.\nLevel 3 - 30 Points.\n\nFeatures in each
+        mode\nEasy mode - slower speed, slowbuff, healthbuff, invincibility bar.\nMedium
+        Mode - All of the above + fast speed, words that if typed will spawn another
+        word, speedbuff.\nHard Mode - All of the above + faster speed, words that
+        move around, red words.\n\n\nB) Endless runner is pretty obvious, where you
+        keep running while avoiding obstacles. \n"
       objectReference: {fileID: 0}
     - target: {fileID: 8700751356077829894, guid: 78f3a905898bac540b9b5d5b4f8d0f6f,
         type: 3}
