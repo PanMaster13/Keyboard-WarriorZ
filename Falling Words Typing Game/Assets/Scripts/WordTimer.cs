@@ -56,7 +56,6 @@ public class WordTimer : MonoBehaviour {
                 ElapsedTime.endTime += minutes + ":" + seconds;
                 wpm = Score.score / 5;
                 WPM.wpm += wpm.ToString();
-                
                 wordManager.EndGame();
             }
         }

@@ -109,6 +109,7 @@ public class ButtonHandler : MonoBehaviour
         Debug.Log("Rematch is pressed");
         TwoPlayerScore.endScore = 0;
         Score.score = 0;
+
         UE.SceneManager.LoadScene("2PlayerMode");
     }
 
