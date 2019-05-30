@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: 0b3300072069537418150df5d6923a5c
+  - enabled: 1
+    path: Assets/Scenes/EasterEgg.unity
+    guid: 8441def8ab6f80b4a86889da0f72ab33
   m_configObjects: {}

@@ -20,6 +20,7 @@ public class ButtonHandler : MonoBehaviour
     * EndScreen 1 - 11
     * EndScreen 2 - 12
     * Instructions - 13
+    * EasterEgg - 14
     */
 
     // This section is for Main Menu.
@@ -154,5 +155,11 @@ public class ButtonHandler : MonoBehaviour
     {
         Debug.Log("Instructions is pressed");
         UE.SceneManager.LoadScene(13);
+    }
+
+    //Proceed to EasterEgg page
+    public void EasterEgg()
+    {
+        UE.SceneManager.LoadScene(14);
     }
 }

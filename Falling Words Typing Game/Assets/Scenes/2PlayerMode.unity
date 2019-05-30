@@ -3210,7 +3210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Xmove: 300
-  speed: 5000
+  speed: 10000
   health: 5
   healthDisplay: {fileID: 626627294}
 --- !u!212 &1911643687
